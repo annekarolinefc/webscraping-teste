@@ -1,1 +1,4 @@
 https://repositorio.animaeducacao.com.br/
+
+
+fazer scrapy shell + url

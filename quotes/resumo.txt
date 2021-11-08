@@ -1,0 +1,43 @@
+site: quotes.toscrape.com
+
+varrer o arquivo html e extrair as informações
+
+Colocar os dados em um arquivo CSV, JSON, BANCO DE DADOS
+
+código 200 = requisição ok
+
+utilizando o scrapy shell:
+
+-----------UTILIZANDO O XPATH()
+    response.xpath("*//div")
+    response.xpath("*//div/span")
+
+    OBTENDO O TEXTO DA QUOTE 
+    obtendo o objeto seletor: significa: todas as divs que possuem span com classe text
+        response.xpath("*//div/span[@class='text']")
+    obtendo o objeto texto: 
+        response.xpath("*//div/span[@class='text']/text()")
+    extrair em formato de texto
+        response.xpath("*//div/span[@class='text']/text()").getall()
+    para retornar o numero de quotes
+        len(response.xpath("*//div/span[@class='text']/text()").getall())
+    extrair em formato texto so o primeiro elemento
+        response.xpath("*//div/span[@class='text']/text()").get()
+    extraindo tag
+    response.xpath("*//a[@class='tag']/text()")
+    response.xpath("*//a[@class='tag']/text()").getall()
+
+    OBTENDO O AUTOR DA QUOTE
+    response.xpath("*//small[@class='author']/text()").getall()
+
+
+
+-----------UTILIZANDO O CSS()
+    response.css("small.author")
+
+    OBTENDO O AUTOR DA QUOTE
+    response.css("small.author::text").getall()
+
+    OBTENDO TAG e retornando uma lista
+    response.css("a.tag::text").getall()
+

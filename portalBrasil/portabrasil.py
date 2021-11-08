@@ -1,5 +1,5 @@
 import scrapy
-import urlparse
+import urllib.parse as urlparse
  
 #Classe Noticia
 class Noticia(scrapy.Item):

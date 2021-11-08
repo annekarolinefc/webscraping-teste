@@ -1,3 +1,5 @@
+https://pythonhelp.wordpress.com/2014/08/05/web-scraping-com-scrapy-primeiros-passos/
+
 Para iniciar - importar o módulo scrapy: pip install scrapy
 caso deseja uma versão específica: python3.5 -m pip install scrapy
 Visualizar documentação : https://docs.scrapy.org/en/latest/intro/tutorial.html
@@ -16,6 +18,9 @@ Antes de escrever spider, exploras as páginas do site
     AGORA, usar seletores para buscar dados de determinada página.
     você deverá ver como o site é organizado e testar
         - seletores xpath()
+            response.xpath("*//div")
+            response.xpath("*//div/span")
+            response.xpath("*//div/span[@class='text']")
         - seletores css()
             response.css('a') -> para obter a tag ancora 
             response.css('a').extract -> para extrair o dados
@@ -39,7 +44,7 @@ Antes de escrever spider, exploras as páginas do site
         metodo de analise e busca de dados
 
 
-    
+Lembrar de fazer navegação entre as páginas - exemplo quote    
 
 5) Rodar o codigo
 
