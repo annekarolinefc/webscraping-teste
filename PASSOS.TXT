@@ -1,0 +1,53 @@
+Para iniciar - importar o módulo scrapy: pip install scrapy
+caso deseja uma versão específica: python3.5 -m pip install scrapy
+Visualizar documentação : https://docs.scrapy.org/en/latest/intro/tutorial.html
+
+1) Criar projeto
+    - scrapy startproject nomeProjeto
+
+2) Buscar dados de determinada página 
+    ao acessar um site, vc esta fazendo uma requisição http GET a um servidor.
+
+Antes de escrever spider, exploras as páginas do site
+    - explocar usando o navegador
+    - explorar usando o scrapy shell
+        - scrapy shell URL
+
+    AGORA, usar seletores para buscar dados de determinada página.
+    você deverá ver como o site é organizado e testar
+        - seletores xpath()
+        - seletores css()
+            response.css('a') -> para obter a tag ancora 
+            response.css('a').extract -> para extrair o dados
+
+    utilizar extensão:https://chrome.google.com/webstore/detail/xpath-helper/hgimnogjllphhhkhlmebbmlgjoejdpjl?hl=en
+    descobrir as melhores maneiras de extrair o conteúdo de um site com XPath() ou CSS()
+
+
+4) Criar Spider
+    nome: 
+        nomeDoSpider.py
+    classe com nome exclusivo:
+
+    definição dos requisitos
+
+    nomear spider 
+        name = 'nomeDoSpider'
+    fornecer URL inicial: spider começara a rastrear atraves dela
+
+    definir metodos para ajudar a rastrear
+        metodo de analise e busca de dados
+
+
+    
+
+5) Rodar o codigo
+
+    - scrapy runspider nome.py
+
+6) Executar o spider e obter a saída e um arquivo json simples
+    - scrapy crawl NAME_OF_SPIDER -o links.json
+
+
+VER: 
+https://acervolima.com/implementando-web-scraping-em-python-com-scrapy/

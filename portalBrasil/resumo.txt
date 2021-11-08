@@ -1,0 +1,12 @@
+Agora, vamos juntar tudo em um spider que resolve o problema que apresentamos na introdução: 
+vamos fazer scraping das 
+    - notícias destaques do Portal Brasil
+    
+    oferecendo uma opção para informar o assunto 
+        - Infraestrutura
+        - Educação
+        - Esporte
+         etc. 
+         
+Dessa forma, se apenas executar o spider, ele deve fazer scraping das notícias destaques na página inicial; 
+caso informe um assunto, ele deve fazer scraping dos destaques da página daquele assunto.
